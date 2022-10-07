@@ -1,0 +1,248 @@
+/*===== GOOGLE FONTS =====*/
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');*/
+/*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 3rem;
+
+    /*===== Colors =====*/
+    --black-color: #111111;
+    --white-color: #FCF8F8;
+
+    /*===== Font and typography =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2.5rem;
+    --big-font-size-title: 2.5rem;
+    --normal-font-size: .938rem;
+
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --big-font-size: 5rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+
+.index-contain{
+    background-image: url("../static/img/fondo.jpg");
+    background-size: cover;
+}
+
+h1, p, ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*===== LAYOUT =====*/
+.index-bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.index-l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.index-nav__close, .index-nav__link, .index-nav__logo, .index-nav__toggle {
+    color: var(--white-color);
+}
+
+.index-nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    box-shadow: 1px 1px 50px 1px #00043c;
+    transition: 1s;
+}
+
+@media screen and (max-width: 768px) {
+    .index-nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        padding: 3.5rem 1.5rem 0;
+        background: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(10px);
+        transition: .5s;
+    }
+}
+
+.index-nav__logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    cursor: text;
+}
+
+.index-nav__close {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.index-nav__toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.index-nav__item {
+    margin-bottom: 2rem;
+}
+
+.index-nav__link::after {
+    content: '';
+    position: absolute;
+    background: var(--white-color);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.index-nav__link:hover::after, .active::after {
+    opacity: 1;
+    transform: translateY(8px);
+}
+
+/*=== Show menu ===*/
+.show {
+    right: 0;
+}
+
+/*=============== HOME ===============*/
+.index-home {
+    overflow: hidden;
+}
+
+.index-home__container {
+    height: calc(100vh - var(--header-height));
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 1.5rem;
+}
+
+.index-home__data {
+    justify-content: center;
+    color: var(--white-color);
+    margin-bottom: 1px !important;
+}
+
+.index-home__title {
+    font-size: var(--big-font-size-title);
+    line-height: 1.3;
+    text-align: initial;
+}
+
+.index-home__description {
+    width: 30rem;
+    font-size: 13px;
+    margin-bottom: 2rem;
+}
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 375px) {
+    .index-nav__link::after {
+        width: 30%;
+    }
+
+    .index-home__data {
+        margin: 1.7rem 0 7rem 0;
+    }
+
+    .index-home__description {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .index-nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .index-nav__toggle, .index-nav__close {
+        display: none;
+    }
+
+    .index-nav__link::after {
+        width: 100%;
+    }
+
+    .index-nav__list {
+        display: flex;
+    }
+
+    .index-nav__item {
+        margin-left: 3rem;
+        margin-bottom: 0;
+    }
+
+    .index-home__container {
+        height: 100vh;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows:  1fr;
+        row-gap: 0;
+        align-items: initial;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .index-bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .index-home__container {
+        justify-content: end;
+        align-items: end;
+    }
+
+    .index-nav__link::after {
+        width: 100%;
+    }
+}
