@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2c6bf091.css",
+    "main.js": "/static/js/main.7ebe9de7.js",
+    "static/media/fondo5-1.png": "/static/media/fondo5-1.0903988a7c50eb5a6ef1.png",
+    "static/media/poseidon2.png": "/static/media/poseidon2.8b09aca35945dad5fe76.png",
+    "static/media/H-Beleronfe.jpg": "/static/media/H-Beleronfe.c59625a3f87abd77f6e5.jpg",
+    "static/media/poseidon.png": "/static/media/poseidon.01890a1748d27a5651ee.png",
+    "static/media/fondo.jpg": "/static/media/fondo.749ca8d4e08c69fdfb16.jpg",
+    "static/media/fondo4.jpg": "/static/media/fondo4.b4bb905ad03c1f4e58e0.jpg",
+    "static/media/poseidon4.png": "/static/media/poseidon4.61c06c72c3a5028e04dd.png",
+    "static/media/H-Triton.png": "/static/media/H-Triton.b3097f99dbda4be62b6e.png",
+    "static/media/fondo3.jpg": "/static/media/fondo3.979c340725e8bfd5f08a.jpg",
+    "static/media/fondo2.jpg": "/static/media/fondo2.5f19d16e29666b22e862.jpg",
+    "static/media/H-Pegaso.jpg": "/static/media/H-Pegaso.c2becd2133533e6a66f5.jpg",
+    "static/media/H-Polifemo.png": "/static/media/H-Polifemo.ea3702824a32709bc78a.png",
+    "static/media/H-Teseo.jpg": "/static/media/H-Teseo.1915916ce5c7b982beb9.jpg",
+    "static/media/H-Caribdis.png": "/static/media/H-Caribdis.b048521046adee051bba.png",
+    "index.html": "/index.html",
+    "main.2c6bf091.css.map": "/static/css/main.2c6bf091.css.map",
+    "main.7ebe9de7.js.map": "/static/js/main.7ebe9de7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c6bf091.css",
+    "static/js/main.7ebe9de7.js"
+  ]
+}
